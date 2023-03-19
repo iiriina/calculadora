@@ -1,0 +1,18 @@
+.input {
+  height: 75px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  color: white;
+  justify-content: flex-end; /* queremos que se muestren al final de la pantallita como si fuera
+  una calculadora a la que le vas agregando cosas, se muestran a la derecha */
+  align-items: center; /* y el alineado vertical si, quiero que los numeros estén en el
+  medio del contenedor de alto */
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #0a0a23;
+  padding: 11px 30px 11px 11px;  /* para que los caracteres no se peguen a los bordes de la pantalla */
+  border: 1px solid #888;
+  box-shadow: -1px 3px 1px 1px white;
+}
+

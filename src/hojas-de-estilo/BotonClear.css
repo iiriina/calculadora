@@ -1,0 +1,21 @@
+.boton-clear{
+  height: 80px;
+  font-size: 1.6em; /* unidad relativa.
+  va a ser 1.6 veces el tamaño de la letra de su contenedor.
+  así si cambio el tamaño de la letra todo lo demás se ajusta a escala */
+  display: flex;
+  flex: 1; /* porque queremos que el boton ocupe todo el espacio */
+  background-color: #ac0246;
+  margin-top: 8px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white; /* queremos que el texto sea blanco */
+  border-radius: 45px;
+  cursor: pointer; /* manito cuando me paro arriba del boton */
+}
+
+.boton-clear:hover{
+  background-color: #ebb000;
+
+}

@@ -1,0 +1,47 @@
+.boton-contenedor{
+  height: 83px;
+  display: flex; /* para que se ubiquen los objetos como cajitas y
+   poder alinear el texto vertical y horizontalmente */
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 38px;
+  background-color: #1b1b32;
+  color: white;
+  border-radius: 25px;
+  border: 2px solid white;
+  margin: 4px;
+  cursor: pointer; /* hacemos que el cursor cuando esté sobre el botón se transforme en una
+  manito */
+  user-select: none; /* que el usuario no pueda seleccionar el texto del boton,
+  es una caracteristica de los botones */
+  flex: 1 1; /* esta propiedad hace que el espacio se distribuya entre los botones equitativamente.
+  si hay 1 boton, el boton ocupa toodo el espacio del contenedor, si hay 2 botones, ocupan mitad y mitad,
+  si hay 3 botones, cada uno ocupa 1/3 (un tercio) del espacio. */
+
+}
+
+.operador {
+  background-color: #00471b; /* esta clase la pongo abajo de la clase general, porque
+  segun el orden, la que esté más abajo en este archivo va a tener más prioridad.
+  cuando el boton tenga la clase boton-contenedor y operador, se va a aplicar el color
+  y las cosas que tenga operador, porque está mas abajo y tiene más prioridad */
+}
+
+.boton-contenedor:hover {
+  background-color: #5a01a7;
+  /* esto es para que cuando yo esté con el cursor arriba del boton,
+  el color de boton cambie. Hasta que saque el cursor
+  de arriba de ese boton. afecta a todos los botones en general.
+   */
+}
+
+.operador:hover{
+  background-color: #ff6600;
+  /* para los que ademas de boton contenedor sean operadores,
+  el color como está declarado más abajo que el otro,
+  va a cambiar cuando esté con mi cursor sobre el boton a color
+  naranja. por lo tanto el color violeta del boton-contenedor se muestran a los que
+  solo tienen esa clase.
+   */
+}
