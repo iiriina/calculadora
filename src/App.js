@@ -3,7 +3,8 @@ import freeCodeCampLogo from './imagenes/freecodecamp-logo.png';
 import Boton from './componentes/Boton.js';
 import Pantalla from './componentes/Pantalla.js';
 import BotonClear from './componentes/BotonClear';
-import {useState} from 'react';
+import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
 
@@ -25,6 +26,17 @@ function App() {
       contiene la cadena con el estado input actual. */
 
   };
+
+  const calcularResultado = () => {
+    setInput(evaluate(input));
+    /* esta funcion la voy a usar para mandar por prop para que sea la que se ejecute
+    en el onclick (event listener) del boton de igual (=).
+    la funcion evaluate es una funcion de la libreria mathjs que hay que importar
+    para poder usarla corriendo: npm install mathjs.
+    que evalua una cadena de caracteres y devuelve el resultado.
+    '3+4' es 12 no estoy segura si en cadena o en numero.
+     */
+  }
 
   return (
     <div className="App">
@@ -66,7 +78,7 @@ function App() {
         </div>
 
         <div className ='fila'>
-          <Boton manejarClic={agregarInput}>=</Boton>
+          <Boton manejarClic={calcularResultado}>=</Boton>
           <Boton manejarClic={agregarInput}>0</Boton>
           <Boton manejarClic={agregarInput}>.</Boton>
           <Boton manejarClic={agregarInput}>/</Boton>
