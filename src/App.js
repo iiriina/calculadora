@@ -2,8 +2,8 @@ import './App.css';
 import freeCodeCampLogo from './imagenes/freecodecamp-logo.png';
 import Boton from './componentes/Boton.js';
 import Pantalla from './componentes/Pantalla.js';
-import BotonClear from "./componentes/BotonClear";
-import {useState} from "react";
+import BotonClear from './componentes/BotonClear';
+import {useState} from 'react';
 
 function App() {
 
@@ -73,7 +73,16 @@ function App() {
         </div>
 
         <div className ='fila'>
-          <BotonClear>Clear</BotonClear>
+          <BotonClear
+            manejarClear = { () => setInput('') }>
+            Clear
+          </BotonClear>
+            {/* en vez de crear una funcion que lo que haga sea limpiar ese input
+             o sea asignarle la cadena de caracteres vacia, lo que hacemos es crear
+             una funcion anonima (Ya que solo tiene una linea la funcion, de todos modos
+             se puede crear como haciamos anteriormente con una funcion arriba)
+             que lo que haga sea setear ese cadena de caracteres como vacia directamente
+             donde se la mando al prop. */ }
         </div>
 
       </div>
